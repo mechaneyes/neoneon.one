@@ -1,0 +1,208 @@
+// rometo Black
+// @
+// font-family: prometo, sans-serif;
+// font-weight: 900;
+
+// Prometo Black Italic
+// font-family: prometo, sans-serif;
+// font-weight: 900;
+// font-style: italic;
+
+// Prometo Light
+// font-family: prometo, sans-serif;
+// font-weight: 300;
+
+// Prometo Medium
+// font-family: prometo, sans-serif;
+// font-weight: 500;
+// Prometo Regular
+// font-family: prometo, sans-serif;
+// font-weight: 400;
+// Prometo Thin
+// font-family: prometo, sans-serif;
+// font-weight: 200;
+// Prometo XBold
+// font-family: prometo, sans-serif;
+// font-weight: 800;
+html {
+    background: url(../images/barclays.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#neoHome {
+    * {
+        box-sizing: border-box;
+    }
+    #neoMain {
+        #neoGrid {
+            display: grid;
+            grid-template-columns: 90px 1fr 1fr;
+            grid-template-rows: 110px 58vw auto;
+            grid-template-areas: 
+                "neoLogo neoLogo circ" 
+                "rect pov pov" 
+                "neoVid neoVid neoVid"
+                "bioRay bioRay bioRay"
+                "bioAndrey bioAndrey bioAndrey"
+                "neoContact neoContact neoContact";
+            font-family: prometo, sans-serif;
+			color: #d02d60;
+            color: #ff0151;
+            a {
+                color: #E76747;
+                text-decoration: none;
+                border-bottom: 1px solid #E76747;
+            }
+            h1 {
+                grid-area: neoLogo;
+                justify-self: start;
+                align-self: end;
+                margin: 0;
+                margin-right: -50px;
+                font-weight: 900;
+                font-style: normal;
+                font-size: 60px;
+                z-index: 2;
+            }
+            h2 {
+                grid-area: pov;
+                align-self: start;
+                display: inline;
+                font-weight: 800;
+                font-style: normal;
+                font-size: 7vw;
+                text-shadow: 2px 2px black;
+                margin: 4% 0 0 -65px;
+                padding: 0 20px 0 10px;
+                z-index: 2;
+            }
+            .circ {
+                grid-area: circ;
+                justify-self: end;
+                border-radius: 50%;
+                width: 140%;
+                transform: rotate(120deg);
+                z-index: 1;
+
+            }
+            .rect {
+                grid-area: rect;
+                justify-self: start;
+                align-self: start;
+                width: 100%;
+            }
+            .neoVid {
+                grid-area: neoVid;
+            }
+            .videoWrapper {
+                grid-area: neoVid;
+                position: relative;
+                padding-bottom: 56.25%; /* 16:9 */
+                padding-bottom: 75%;    /* 4:3 Aspect Ratio */
+                padding-top: 25px;
+                height: 0;
+            }
+            .videoWrapper iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            .neoCopySect {
+                margin-top: 20px;
+                padding: 10px;
+                background: rgba(0,0,0,0.7);
+                &:first-child {
+                    margin-bottom: 0;
+                }
+            }
+            .neoBio {
+                grid-area: neoBio;
+                img {
+                    float: left;
+                    padding: 0 10px 10px 0;
+                    width: 33.3333%;
+                    width: 32%;
+                }
+                h3 {
+                    margin: -1px 0 7px;
+                    padding: 0;
+                    color: #FF3776;
+                    line-height: 1;
+                }
+                h4 {
+                    margin: 0;
+                    color: #E76747;
+                    color: #FFA993;
+                    color: #FF3776;
+                }
+                p {
+                    clear: both;
+                    margin: -4px 0 0;
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                &.bioRay {
+                    grid-area: bioRay;
+                }
+                &.bioAndrey {
+                    grid-area: bioAndrey;
+                }
+            }
+            #neoContact {
+                grid-area: neoContact;
+                p:first-child {
+                    margin-top: 0;
+                }
+            }
+        }
+        @media (min-width: 450px) {
+            #neoGrid {
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-template-areas: "neoLogo circ" "rect pov";
+                color: #d02d60;
+                color: #ff0151;
+                h1 {
+                    grid-area: neoLogo;
+                    justify-self: end;
+                    align-self: end;
+                    margin: 0;
+                    font-family: prometo, sans-serif;
+                    font-weight: 900;
+                    font-style: normal;
+                    font-size: 11.3vw;
+                }
+                h2 {
+                    grid-area: pov;
+                    display: inline;
+                    padding-left: 20px;
+                    padding-right: 50px;
+                    font-weight: 800;
+                    font-style: normal;
+                    text-shadow: none;
+                }
+                .circ {
+                    grid-area: circ;
+                    border-radius: 50%;
+                    width: 80%;
+                }
+                .rect {
+                    grid-area: rect;
+                    justify-self: end;
+                    align-self: start;
+                    width: 47.7%;
+                }
+            }
+        }
+        @media (min-width: 1880px) {
+            #neoGrid {
+                h1 {
+                    font-size: 198px;
+                }
+            }
+        }
+    }
+}
