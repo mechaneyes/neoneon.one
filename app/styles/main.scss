@@ -34,6 +34,9 @@ html {
     * {
         box-sizing: border-box;
     }
+    img {
+        display: block;
+    }
     #neoMain {
         #neoGrid {
             overflow: hidden;
@@ -65,19 +68,20 @@ html {
                 font-weight: 900;
                 font-style: normal;
                 font-size: 60px;
+                text-shadow: 2px 2px black;
                 z-index: 2;
             }
             h2 {
                 grid-area: pov;
                 align-self: start;
                 display: inline;
+                margin: 4% 0 0 -75px;
+                padding: 0 20px 0 10px;
                 font-weight: 800;
                 font-style: normal;
                 font-size: 7.6vw;
                 line-height: 1.2;
                 text-shadow: 2px 2px black;
-                margin: 4% 0 0 -75px;
-                padding: 0 20px 0 10px;
                 z-index: 2;
             }
             h3 {
@@ -178,12 +182,18 @@ html {
             }
         }
     }
-    @media (min-width: 450px) {
+    @media (min-width: 550px) {
         #neoMain {
             #neoGrid {
-                grid-template-columns: 52% 48%;;
+                grid-template-columns: 54% 48%;;
                 grid-template-rows: auto;
-                grid-template-areas: "neoLogo circ" "rect pov";
+                grid-template-areas: 
+                    "neoLogo circ"
+                    "rect pov"
+                    "videoOne videoOne"
+                    "videoTwo videoTwo"
+                    "neoBio neoBio"
+                    "neoContact neoContact";
                 color: #d02d60;
                 color: #ff0151;
                 h1 {
@@ -201,19 +211,57 @@ html {
                     font-size: 4.4vw;
                     // text-shadow: none;
                 }
+                h3 {
+                    font-size: 5vw;
+                }
+                h4 {
+                    margin-bottom: 20px;
+                    font-size: 4vw;
+                    line-height: 1;
+                }
+                p {
+                    clear: none;
+                    text-shadow: 2px 2px black;
+                }
                 .circ {
                     grid-area: circ;
                     justify-self: start;
                     width: 80%;
                     margin-left: -2%;
                 }
-                .rect {
+                .rectCont {
                     grid-area: rect;
                     justify-self: end;
                     align-self: start;
-                    width: 47.7%;
-                    margin: 30px -3% 0 0;
+                    width: 68.7%;
+                    width: 200px;
+                    height: 400px;
+                    margin: 30px 0 0 0;
+                    object-fit: contain;
+                    overflow: hidden;
+                }
+                .rect {
                     visibility: visible;
+                    // width: 100%;
+                }
+                .neoCopySect {
+                    padding: 20px 20px 30px;
+                }
+                #neoBio {
+                    img {
+                        margin: 0 10px 10px 0;
+                        padding-bottom: 0;
+                        width: 33.3333%;
+                        // width: 32%;
+                    }
+                    .bioRay {
+                        // grid-area: bioRay;
+                        // margin-top: 30px;
+                        margin-bottom: 30px;
+                    }
+                    .bioAndrey {
+                        // grid-area: bioAndrey;
+                    }
                 }
             }
         }
