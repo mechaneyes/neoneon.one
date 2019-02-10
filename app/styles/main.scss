@@ -25,7 +25,7 @@
 // font-family: prometo, sans-serif;
 // font-weight: 800;
 html {
-    background: url(../images/barclays.jpg) no-repeat center center fixed;
+    background: url(../images/barclays.jpg) repeat-x center center fixed;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -36,30 +36,31 @@ html {
     }
     #neoMain {
         #neoGrid {
+            overflow: hidden;
             display: grid;
             grid-template-columns: 90px 1fr 1fr;
-            grid-template-rows: 110px 58vw auto;
+            grid-template-rows: 120px 58vw auto;
             grid-template-areas: 
                 "neoLogo neoLogo circ" 
                 "rect pov pov" 
                 "videoOne videoOne videoOne"
                 "videoTwo videoTwo videoTwo"
-                "bioRay bioRay bioRay"
-                "bioAndrey bioAndrey bioAndrey"
+                "neoBio neoBio neoBio"
+                // "bioAndrey bioAndrey bioAndrey"
                 "neoContact neoContact neoContact";
             font-family: prometo, sans-serif;
 			color: #d02d60;
             color: #ff0151;
             a {
-                color: #E76747;
+                color: #FF7E5E;
                 text-decoration: none;
-                border-bottom: 1px solid #E76747;
+                border-bottom: 1px solid #FF7E5E;
             }
             h1 {
                 grid-area: neoLogo;
                 justify-self: start;
                 align-self: end;
-                margin: 0;
+                margin: 0 0 0 22px;
                 margin-right: -50px;
                 font-weight: 900;
                 font-style: normal;
@@ -72,17 +73,39 @@ html {
                 display: inline;
                 font-weight: 800;
                 font-style: normal;
-                font-size: 7vw;
+                font-size: 7.6vw;
+                line-height: 1.2;
                 text-shadow: 2px 2px black;
-                margin: 4% 0 0 -65px;
+                margin: 4% 0 0 -75px;
                 padding: 0 20px 0 10px;
                 z-index: 2;
+            }
+            h3 {
+                margin: -1px 0 7px;
+                margin: 0;
+                padding: 0;
+                font-size: 6.3vw;
+                color: #FF3776;
+                line-height: 1;
+            }
+            h4 {
+                margin: 5px 0 0;
+                font-size: 5.5vw;
+                color: #E76747;
+                color: #FFA993;
+                color: #FF3776;
+            }
+            p {
+                clear: both;
+                margin: -4px 0 0;
+                font-size: 23px;
+                font-weight: 500;
             }
             .circ {
                 grid-area: circ;
                 justify-self: end;
                 border-radius: 50%;
-                width: 140%;
+                width: 180%;
                 transform: rotate(120deg);
                 z-index: 1;
 
@@ -91,7 +114,8 @@ html {
                 grid-area: rect;
                 justify-self: start;
                 align-self: start;
-                width: 100%;
+                width: 150%;
+                visibility: hidden;
             }
             .neoVid {
                 grid-area: neoVid;
@@ -113,6 +137,7 @@ html {
             }
             .videoOne {
                 grid-area: videoOne;
+                margin-top: 50px;
             }
             .videoTwo {
                 grid-area: videoTwo;
@@ -125,43 +150,30 @@ html {
                     margin-bottom: 0;
                 }
             }
-            .neoBio {
+            #neoBio {
                 grid-area: neoBio;
+                margin-top: 60px;
                 img {
                     float: left;
                     padding: 0 10px 10px 0;
                     width: 33.3333%;
                     width: 32%;
                 }
-                h3 {
-                    margin: -1px 0 7px;
-                    padding: 0;
-                    color: #FF3776;
-                    line-height: 1;
+                .bioRay {
+                    // grid-area: bioRay;
+                    // margin-top: 30px;
+                    margin-bottom: 30px;
                 }
-                h4 {
-                    margin: 0;
-                    color: #E76747;
-                    color: #FFA993;
-                    color: #FF3776;
-                }
-                p {
-                    clear: both;
-                    margin: -4px 0 0;
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-                &.bioRay {
-                    grid-area: bioRay;
-                }
-                &.bioAndrey {
-                    grid-area: bioAndrey;
+                .bioAndrey {
+                    // grid-area: bioAndrey;
                 }
             }
             #neoContact {
                 grid-area: neoContact;
+                margin: 60px 0;
+                padding-bottom: 20px;
                 p:first-child {
-                    margin-top: 0;
+                    margin: 0 0 20px;
                 }
             }
         }
