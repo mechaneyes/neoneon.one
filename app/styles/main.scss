@@ -24,6 +24,12 @@
 // Prometo XBold
 // font-family: prometo, sans-serif;
 // font-weight: 800;
+
+
+$dropShadow: 2px 2px black;
+
+
+
 html {
     background: url(../images/barclays.jpg) repeat-x center center fixed;
     background-size: cover;
@@ -42,17 +48,6 @@ html {
     #neoMain {
         margin-top: 30px;
         #neoGrid {
-            overflow: hidden;
-            // display: grid;
-            // grid-template-columns: 90px 1fr 1fr;
-            // grid-template-rows: 120px 58vw auto;
-            // grid-template-areas: 
-            //     "neoLogo neoLogo circ" 
-            //     "rect pov pov" 
-            //     "neoVideos neoVideos neoVideos"
-            //     "neoBios neoBios neoBios"
-            //     // "bioAndrey bioAndrey bioAndrey"
-            //     "neoContact neoContact neoContact";
             #neoHero {
                 grid-area: neoHero;
                 display: grid;
@@ -63,8 +58,9 @@ html {
                     "rect pov pov";
             }
             font-family: prometo, sans-serif;
-			color: #d02d60;
+			// color: #d02d60;
             color: #ff0151;
+            font-style: normal;
             a {
                 color: #FF7E5E;
                 text-decoration: none;
@@ -77,9 +73,8 @@ html {
                 margin: 0 0 0 22px;
                 margin-right: -50px;
                 font-weight: 900;
-                font-style: normal;
                 font-size: 60px;
-                text-shadow: 2px 2px black;
+                text-shadow: $dropShadow;
                 z-index: 2;
             }
             h2 {
@@ -87,35 +82,30 @@ html {
                 align-self: start;
                 display: inline;
                 margin: 4% 0 0 -75px;
-                padding: 0 20px 0 10px;
+                padding: 0 70px 0 10px;
                 font-weight: 800;
-                font-style: normal;
                 font-size: 7.6vw;
+                letter-spacing: 1px;
                 line-height: 1.2;
-                text-shadow: 2px 2px black;
+                text-shadow: $dropShadow;
                 z-index: 2;
             }
             h3 {
-                margin: -1px 0 7px;
                 margin: 0 0 7px;
                 padding: 0;
-                font-size: 2.9vw;
                 font-size: 4.5vw;
                 color: #FF3776;
                 line-height: 1;
+                text-shadow: $dropShadow;
             }
             h4 {
                 margin: 5px 0 10px;
-                font-size: 5.5vw;
                 font-size: 3.2vw;
-                color: #E76747;
-                color: #FFA993;
                 color: #FF3776;
+                text-shadow: $dropShadow;
             }
             p {
-                // clear: both;
                 margin: -4px 0 0;
-                font-size: 23px;
                 font-size: 2.9vw;
                 font-weight: 500;
             }
@@ -134,15 +124,11 @@ html {
                 justify-self: end;
                 border-radius: 50%;
                 width: 180%;
-                transform: rotate(120deg);
+                transform: rotate(118deg);
                 z-index: 1;
 
             }
             .rect {
-                // grid-area: rect;
-                // justify-self: start;
-                // align-self: start;
-                // width: 150%;
                 visibility: hidden;
             }
 
@@ -164,10 +150,11 @@ html {
             .videoWrapper {
                 grid-area: neoVid;
                 position: relative;
-                padding-bottom: 56.25%; /* 16:9 */
-                padding-bottom: 75%;    /* 4:3 Aspect Ratio */
+                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+                padding-bottom: 75%;    /* 4:3 */
                 padding-top: 25px;
                 height: 0;
+                // max-height: 100vh;
             }
             .videoWrapper iframe {
                 position: absolute;
@@ -175,6 +162,7 @@ html {
                 left: 0;
                 width: 100%;
                 height: 100%;
+                // max-height: 100vh;
             }
             .videoOne {
                 grid-area: videoOne;
@@ -203,7 +191,7 @@ html {
             // ————————————————————————————————————o————————————————————————————————————o BIOS -->
             #neoBios {
                 grid-area: neoBios;
-                max-width: 1420px;
+                // max-width: 1420px;
                 margin-top: 60px;
                 overflow: hidden;
                 .neoBio {
@@ -279,7 +267,6 @@ html {
                     justify-self: end;
                     align-self: end;
                     margin: 0 0 0 -0.5%;
-                    // margin: 0 10px 0 0;
                     font-size: 11.3vw;
                     line-height: 0.7;
                 }
@@ -298,9 +285,7 @@ html {
                     line-height: 1.1;
                 }
                 p {
-                    clear: none;
-                    // font-size: 2.4vw;
-                    text-shadow: 2px 2px black;
+                    text-shadow: $dropShadow;
                 }
                 .circ {
                     grid-area: circ;
@@ -362,24 +347,48 @@ html {
                     font-size: 19px;
                 }
                 #neoBios {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: auto;
-                    grid-gap: 10px;
                     width: 100%;
-                    .neoBio {
-                        // width: 100%;
-                    }
                     .bioRay {
-                        margin: 0;
+                        // margin: 0 0 20px;
                     }
                     .bioAndrey {
                         margin: 0;
                     }
                     img {
+                        width: 33.3333%;
                         margin: 0 10px 0 0;
                         padding-bottom: 0;
-                        width: 33.3333%;
+                    }
+                }
+            }
+            .videoWrapper iframe {
+                max-height: none;
+            }
+        }
+    }
+
+
+
+
+
+
+
+    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
+    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
+    // 1090px -->
+    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
+    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
+    @media (min-width: 1090px) {
+        #neoMain {
+            #neoGrid {
+                #neoBios {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: auto;
+                    grid-gap: 10px;
+                    width: 100%;
+                    .bioRay {
+                        margin: 0;
                     }
                 }
             }
@@ -401,7 +410,7 @@ html {
         #neoMain {
             #neoGrid {
                 h2 {
-                    padding-right: 40px;
+                    padding-right: 50px;
                 }
             }
         }
@@ -413,4 +422,23 @@ html {
             }
         }
     }
+
+
+
+
+
+
+
+    // ————————————————————————————————————o————————————————————————————————————o VERT -->
+    // ————————————————————————————————————o————————————————————————————————————o VERT -->
+    // VERT -->
+    // ————————————————————————————————————o————————————————————————————————————o VERT -->
+    // ————————————————————————————————————o————————————————————————————————————o VERT -->
+    // @media (min-height: 1024px) {
+    //     #neoMain {
+    //         .videoWrapper iframe {
+    //             max-height: none;
+    //         }
+    //     }
+    // }
 }
