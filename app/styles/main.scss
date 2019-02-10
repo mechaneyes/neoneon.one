@@ -52,10 +52,13 @@ html {
                 grid-area: neoHero;
                 display: grid;
                 grid-template-columns: 90px 1fr 1fr;
-                grid-template-rows: 120px 58vw auto;
+                grid-template-rows: 120px 300px;
                 grid-template-areas: 
                     "neoLogo neoLogo circ" 
-                    "rect pov pov";
+                    "pov pov pov";
+                .rect {
+                    // display: none;
+                }
             }
             font-family: prometo, sans-serif;
 			// color: #d02d60;
@@ -81,8 +84,8 @@ html {
                 grid-area: pov;
                 align-self: start;
                 display: inline;
-                margin: 4% 0 0 -75px;
-                padding: 0 70px 0 10px;
+                margin: 4% 0 0 35px;
+                padding: 0 10px 0 10px;
                 font-weight: 800;
                 font-size: 7.6vw;
                 letter-spacing: 1px;
@@ -107,6 +110,7 @@ html {
             p {
                 margin: -4px 0 0;
                 font-size: 2.9vw;
+                font-size: 18px;
                 font-weight: 500;
             }
 
@@ -130,6 +134,7 @@ html {
             }
             .rect {
                 visibility: hidden;
+                display: none;
             }
 
 
@@ -272,6 +277,7 @@ html {
                 }
                 h2 {
                     grid-area: pov;
+                    margin-left: -14%;
                     padding: 40px 50px 0 0;
                     font-size: 4.4vw;
                     // text-shadow: none;
@@ -294,6 +300,7 @@ html {
                     margin-left: -7%;
                 }
                 .rect {
+                    display: block;
                     grid-area: rect;
                     justify-self: end;
                     align-self: start;
