@@ -1,28 +1,24 @@
-// rometo Black
-// @
+// Prometo Black
 // font-family: prometo, sans-serif;
 // font-weight: 900;
 
 // Prometo Black Italic
-// font-family: prometo, sans-serif;
 // font-weight: 900;
 // font-style: italic;
 
 // Prometo Light
-// font-family: prometo, sans-serif;
 // font-weight: 300;
 
 // Prometo Medium
-// font-family: prometo, sans-serif;
 // font-weight: 500;
+
 // Prometo Regular
-// font-family: prometo, sans-serif;
 // font-weight: 400;
+
 // Prometo Thin
-// font-family: prometo, sans-serif;
 // font-weight: 200;
+
 // Prometo XBold
-// font-family: prometo, sans-serif;
 // font-weight: 800;
 
 
@@ -128,7 +124,7 @@ html {
                 justify-self: end;
                 border-radius: 50%;
                 width: 180%;
-                transform: rotate(118deg);
+                // transform: rotate(118deg);
                 z-index: 1;
 
             }
@@ -196,7 +192,7 @@ html {
             // ————————————————————————————————————o————————————————————————————————————o BIOS -->
             #neoBios {
                 grid-area: neoBios;
-                // max-width: 1420px;
+                max-width: 1700px;
                 margin-top: 60px;
                 overflow: hidden;
                 .neoBio {
@@ -369,7 +365,7 @@ html {
                 }
             }
             .videoWrapper iframe {
-                max-height: none;
+                max-height: 100vh;
             }
         }
     }
@@ -441,11 +437,11 @@ html {
     // VERT -->
     // ————————————————————————————————————o————————————————————————————————————o VERT -->
     // ————————————————————————————————————o————————————————————————————————————o VERT -->
-    // @media (min-height: 1024px) {
-    //     #neoMain {
-    //         .videoWrapper iframe {
-    //             max-height: none;
-    //         }
-    //     }
-    // }
+    @media (max-height: 1024px) {
+        #neoMain {
+            .videoWrapper iframe {
+                max-height: none;
+            }
+        }
+    }
 }
