@@ -91,12 +91,18 @@ html {
             }
             font-family: prometo, sans-serif;
             font-family: mr-eaves-xl-modern, sans-serif;
+            font-family: mr-eaves-xl-sans, sans-serif;
+            font-weight: 400;
             color: #ff0151;
             font-style: normal;
             a {
                 color: #FF7E5E;
+                // color: #ff0151;
+                // color: #ff623b;
                 text-decoration: none;
                 border-bottom: 1px solid #FF7E5E;
+                // border-color: #ff623b;
+                // border-color: #ff0151;
             }
             h1 {
                 grid-area: neoLogo;
@@ -125,22 +131,25 @@ html {
             h3 {
                 margin: 0 0 7px;
                 padding: 0;
-                font-size: 4.5vw;
-                color: #FF3776;
+                // font-size: 4.5vw;
+                font-size: 29px;
+                // color: #FF3776;
                 line-height: 1;
                 text-shadow: $dropShadow;
             }
             h4 {
                 margin: 5px 0 10px;
-                font-size: 3.2vw;
-                color: #FF3776;
+                // font-size: 3.2vw;
+                font-size: 23px;
+                // color: #FF3776;
                 text-shadow: $dropShadow;
             }
             p {
                 margin: -4px 0 0;
-                font-size: 2.9vw;
-                font-size: 18px;
-                font-weight: 500;
+                font-family: mr-eaves-xl-modern, sans-serif;
+                // font-size: 2.9vw;
+                font-size: 21px;
+                font-weight: 400;
             }
 
 
@@ -208,7 +217,7 @@ html {
             .neoCopySect {
                 margin-top: 20px;
                 padding: 10px;
-                background: rgba(0,0,0,0.7);
+                background: rgba(0,0,0,0.8);
                 &:first-child {
                     margin-bottom: 0;
                 }
@@ -237,6 +246,9 @@ html {
                     width: 33.3333%;
                     width: 32%;
                     max-width: 260px;
+                }
+                p {
+                    display: block;
                 }
                 .neoBio {
                     display: inline-block;
@@ -312,11 +324,11 @@ html {
                     // text-shadow: none;
                 }
                 h3 {
-                    font-size: 4.3vw;
+                    // font-size: 4.3vw;
                 }
                 h4 {
                     margin-bottom: 20px;
-                    font-size: 3.1vw;
+                    // font-size: 3.1vw;
                     line-height: 1.1;
                 }
                 p {
@@ -354,7 +366,7 @@ html {
     @media (min-width: 680px) {
         #neoMain #neoGrid {
             p {
-                font-size: 19px;
+                // font-size: 19px;
             }
         }
     }
@@ -374,13 +386,13 @@ html {
         #neoMain {
             #neoGrid {
                 h3 {
-                    font-size: 37px;
+                    // font-size: 37px;
                 }
                 h4 {
-                    font-size: 29px;
+                    // font-size: 29px;
                 }
                 p {
-                    font-size: 19px;
+                    // font-size: 26px;
                 }
                 #neoBios {
                     width: 100%;
