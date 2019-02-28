@@ -150,6 +150,10 @@ html {
                 // font-size: 2.9vw;
                 font-size: 21px;
                 font-weight: 400;
+                line-height: 1.5;
+                &:not(:first-of-type) {
+                    padding-top: 20px;
+                }
             }
 
 
@@ -181,6 +185,23 @@ html {
 
 
 
+            // ————————————————————————————————————o————————————————————————————————————o INRO -->
+            // INRO -->
+            // ————————————————————————————————————o————————————————————————————————————o INRO -->
+            #neoIntro {
+                // width: 51%;
+                width: 66%;
+                margin: 100px 0;
+                .neoCopySect {
+                    padding-right: 30px;
+                }
+            }
+
+
+
+
+
+
             // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
             // VIDEOS -->
             // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
@@ -191,16 +212,16 @@ html {
                 grid-area: neoVid;
             }
             .videoWrapper {
-                grid-area: neoVid;
+                // grid-area: neoVid;
                 position: relative;
                 padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                padding-bottom: 75%;    /* 4:3 */
-                padding-top: 25px;
+                // padding-bottom: 75%;    /* 4:3 */
                 height: 0;
                 // max-height: 100vh;
             }
             .videoWrapper iframe {
                 position: absolute;
+                // position: relative;
                 top: 0;
                 left: 0;
                 width: 100%;
@@ -209,10 +230,18 @@ html {
             }
             .videoOne {
                 grid-area: videoOne;
-                margin-top: 50px;
+                // margin-top: 50px;
+                margin-bottom: 50px;
             }
             .videoTwo {
                 grid-area: videoTwo;
+                .videoWrapper {
+                    padding-bottom: 75%;    /* 4:3 */
+                    iframe {
+                        float: left;
+                        // max-height: calc(100vh - 40px);
+                    }
+                }
             }
             .neoCopySect {
                 margin-top: 20px;

@@ -48,7 +48,19 @@
 					<h1>neoneon</h1>
 					<img class="circ" src="images/o01c.jpg" />
 					<img class="rect" src="images/i01c.jpg" />
-					<h2>Synthesizing unique shared experiences that blur the line between art and technology</h2>
+					<h2>Synthesizing dream-like experiences that dissolve the line between art and technology</h2>
+				</article>
+
+
+
+
+
+
+				<!-- ————————————————————————————————————o————————————————————————————————————o INTRO -->
+					<!-- INTRO -->
+				<!-- ————————————————————————————————————o————————————————————————————————————o INTRO -->
+				<article id="neoIntro">
+					<p class="neoCopySect">We are a team of experimental digital artists based in New York City. Combining years of experience in music event programming, graphic design, sound engineering, coding, and DJ'ing we are exploring the intersection between sound, movement, and shape. Driven by a deep connection with dance music culture, we are working to create a unique fusion of live performance and interactive audio-visual environments using emerging technologies like augmented and virtual reality, projection mapping, and contextual sensors. Our passion for music has previously manifested in a series of loft parties called Sound Noir – it is through those events that we have developed our vision of incorporating sonic and visual elements with moving bodies, while connecting with a network of talented musicians and performance artists.</p>
 				</article>
 
 
@@ -60,14 +72,28 @@
 					<!-- VIDEOS -->
 				<!-- ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
 				<article id="neoVideos">
-					<div class="videoOne videoWrapper">
-						<iframe src="https://player.vimeo.com/video/317870927" width="640" height="480" frameborder="0"
-						 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					</div>
-					<div class="videoTwo videoWrapper">
-						<iframe src="https://player.vimeo.com/video/316349170" width="640" height="480" frameborder="0"
-						 webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-					</div>
+                    <div class="videoOne">
+                        <div class="videoWrapper">
+                            <iframe src="https://player.vimeo.com/video/317870927" width="640" height="480" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                        <div class="neoCopySect">
+                            <p>neon.Body is a work-in-progress augmented reality installation piece about dance and dancers. Utilizing motion-capture and volumetric scans of several dancers working in predominantly marginalized dance styles, it employs AR technology (via the Magic Leap One platform) to deconstruct and manipulate the movements, ultimately decontextualizing them from the social preconceptions our culture holds about certain bodies and dance styles.</p>
+
+                            <p>The question we are asking is why certain styles of dance are considered purely entertainment, while others are afforded institutional support and regarded as “high art” with enduring cultural value. To that end we have secured collaborations with Bosnian dancer and choreographer Mersiha Mesihovic, whose work reinterprets Balkan dance, as well as with professional vogue dancer Luz Guzman, and with break-dancer Mark Zone, who has been an active street performer since late 70s.</p>
+                            
+                            <p>Underlying this installation project is our continuing research and development of a solution for synchronizing live performance with AR visuals.</p>
+                        </div>
+                    </div>
+                    <div class="videoTwo">
+                        <div class="videoWrapper">
+                            <iframe src="https://player.vimeo.com/video/316349170" width="640" height="480" frameborder="0"
+                            webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                        <div class="neoCopySect">
+                            <p>neon.One is a work-in-progress audio-visual environment reactive to viewer’s location within the room. Three music tracks and three sets of visuals blend seamlessly depending on spectator's location in their space.</p>
+                        </div>
+                    </div>
 				</article>
 
 
@@ -112,7 +138,7 @@
 				<!-- ————————————————————————————————————o————————————————————————————————————o CONTACT -->
 				<article id="neoContact" class="neoCopySect">
 					<p><a href="#">Facebook</a> &middot; <a href="#">Twitter</a> &middot; <a href="#">Instagram</a></p>
-					<p><a href="mailto:one@neoneon.one">one@neoneon.one</a></p>
+					<p style="padding-top: 0;"><a href="mailto:one@neoneon.one">one@neoneon.one</a></p>
 				</article>
 			</article>
 
@@ -131,6 +157,14 @@
 	<!-- endbuild -->
 	
 	<script>
+
+        var introLeft = window.innerWidth / 2 - $('#neoHero .rect').width();
+        var introOffset = $('#neoIntro').offset()
+
+        $(function() {
+            console.log('introOffset: ' + introOffset.left)
+            // $('#neoIntro').css('margin-left', introLeft)
+        })
 
 		// var scroller = $('h2');
 
