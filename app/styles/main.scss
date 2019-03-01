@@ -22,6 +22,8 @@
 // font-weight: 800;
 
 
+// 
+// 
 
 
 // Mr Eaves XL Mod OT Reg
@@ -41,6 +43,28 @@
 // font-family: mr-eaves-xl-sans, sans-serif;
 // font-weight: 400;
 // font-style: normal;
+
+
+// 
+// 
+
+
+// Univia Pro Book
+// font-family: univia-pro, sans-serif;
+// font-weight: 400;
+
+// Univia Pro Regular
+// font-weight: 500;
+
+// Univia Pro Medium
+// font-weight: 600;
+
+// Univia Pro Bold
+// font-weight: 700;
+
+
+ 
+
 
 
 
@@ -75,7 +99,8 @@ html {
         display: block;
     }
     #neoMain {
-        margin-top: 30px;
+        max-width: 1280px;
+        margin: 30px auto 0;
         #neoGrid {
             #neoHero {
                 grid-area: neoHero;
@@ -92,6 +117,7 @@ html {
             font-family: prometo, sans-serif;
             font-family: mr-eaves-xl-modern, sans-serif;
             font-family: mr-eaves-xl-sans, sans-serif;
+            font-family: univia-pro, sans-serif;
             font-weight: 400;
             color: #ff0151;
             font-style: normal;
@@ -146,7 +172,7 @@ html {
             }
             p {
                 margin: -4px 0 0;
-                font-family: mr-eaves-xl-modern, sans-serif;
+                // font-family: mr-eaves-xl-modern, sans-serif;
                 // font-size: 2.9vw;
                 font-size: 21px;
                 font-weight: 400;
@@ -190,10 +216,32 @@ html {
             // ————————————————————————————————————o————————————————————————————————————o INRO -->
             #neoIntro {
                 // width: 51%;
-                width: 66%;
-                margin: 100px 0;
+                // width: 66%;
+                margin: 200px 0;
+                // display: grid;
+                grid-template-columns: 1fr 66%;
+                grid-template-areas: "introCirc introCopy";
+                grid-column-gap: 50px;
+                overflow: hidden;
+                .introCirc {
+                    grid-area: introCirc;
+                    justify-self: start;
+                    // width: 100%;
+                    float: left;
+                    width: 37%;
+                    margin-top: 280px;
+                    // margin-left: 0;
+                    margin-left: 30px;
+                    transform: rotate(118deg);
+                    border-radius: 50%;
+                    float: left;
+                }
                 .neoCopySect {
-                    padding-right: 30px;
+                    grid-area: introCopy;
+                    // width: 100%;
+                    // padding-right: 30px;
+                    width: 53%;
+                    float: right;
                 }
             }
 
@@ -207,6 +255,7 @@ html {
             // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
             #neoVideos {
                 grid-area: neoVideos;
+                margin-bottom: 100px;
             }
             .neoVid {
                 grid-area: neoVid;
@@ -264,7 +313,7 @@ html {
             #neoBios {
                 grid-area: neoBios;
                 max-width: 1700px;
-                margin-top: 60px;
+                // margin-top: 60px;
                 overflow: hidden;
                 .neoBio {
                     display: inline-block;
@@ -483,11 +532,15 @@ html {
     // BIG -->
     // ————————————————————————————————————o————————————————————————————————————o BIG -->
     // ————————————————————————————————————o————————————————————————————————————o BIG -->
-    @media (min-width: 1280px) {
+    @media (min-width: 1281px) {
         #neoMain {
             #neoGrid {
+                h1 {
+                    font-size: 145px;
+                }
                 h2 {
                     padding-right: 50px;
+                    font-size: 56px;
                 }
             }
         }
