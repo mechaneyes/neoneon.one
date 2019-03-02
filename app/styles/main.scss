@@ -114,9 +114,9 @@ html {
                     // display: none;
                 }
             }
-            font-family: prometo, sans-serif;
-            font-family: mr-eaves-xl-modern, sans-serif;
-            font-family: mr-eaves-xl-sans, sans-serif;
+            // font-family: prometo, sans-serif;
+            // font-family: mr-eaves-xl-modern, sans-serif;
+            // font-family: mr-eaves-xl-sans, sans-serif;
             font-family: univia-pro, sans-serif;
             font-weight: 400;
             color: #ff0151;
@@ -228,7 +228,7 @@ html {
                     justify-self: start;
                     // width: 100%;
                     float: left;
-                    width: 37%;
+                    width: 39%;
                     margin-top: 280px;
                     // margin-left: 0;
                     margin-left: 30px;
@@ -280,7 +280,7 @@ html {
             .videoOne {
                 grid-area: videoOne;
                 // margin-top: 50px;
-                margin-bottom: 50px;
+                margin-bottom: 100px;
             }
             .videoTwo {
                 grid-area: videoTwo;
