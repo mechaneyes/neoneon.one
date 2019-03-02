@@ -255,7 +255,7 @@ html {
             // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
             #neoVideos {
                 grid-area: neoVideos;
-                margin-bottom: 100px;
+                margin-bottom: 200px;
             }
             .neoVid {
                 grid-area: neoVid;
@@ -299,6 +299,14 @@ html {
                 &:first-child {
                     margin-bottom: 0;
                 }
+            }
+            .revealer {
+                color: #FF7E5E;
+                cursor: pointer;
+            }
+            .hidden {
+                display: none;
+                padding-top: 20px;
             }
 
 

@@ -79,11 +79,13 @@
                             webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                         </div>
                         <div class="neoCopySect">
-                            <p>neon.Body is a work-in-progress augmented reality installation piece about dance and dancers. Utilizing motion-capture and volumetric scans of several dancers working in predominantly marginalized dance styles, it employs AR technology (via the Magic Leap One platform) to deconstruct and manipulate the movements, ultimately decontextualizing them from the social preconceptions our culture holds about certain bodies and dance styles.</p>
+                            <p>neon.Body is a work-in-progress augmented reality installation piece about dance and dancers. Utilizing motion-capture and volumetric scans of several dancers working in predominantly marginalized dance styles, it employs AR technology (via the Magic Leap One platform) to deconstruct and manipulate the movements, ultimately decontextualizing them from the social preconceptions our culture holds about certain bodies and dance styles. <span class="revealer">See More</span></p>
 
-                            <p>The question we are asking is why certain styles of dance are considered purely entertainment, while others are afforded institutional support and regarded as “high art” with enduring cultural value. To that end we have secured collaborations with Bosnian dancer and choreographer Mersiha Mesihovic, whose work reinterprets Balkan dance, as well as with professional vogue dancer Luz Guzman, and with break-dancer Mark Zone, who has been an active street performer since late 70s.</p>
-                            
-                            <p>Underlying this installation project is our continuing research and development of a solution for synchronizing live performance with AR visuals.</p>
+                            <div class="hidden">
+                                <p>The question we are asking is why certain styles of dance are considered purely entertainment, while others are afforded institutional support and regarded as “high art” with enduring cultural value. To that end we have secured collaborations with Bosnian dancer and choreographer Mersiha Mesihovic, whose work reinterprets Balkan dance, as well as with professional vogue dancer Luz Guzman, and with break-dancer Mark Zone, who has been an active street performer since late 70s.</p>
+                                
+                                <p>Underlying this installation project is our continuing research and development of a solution for synchronizing live performance with AR visuals.</p>
+                            </div>
                         </div>
                     </div>
                     <div class="videoTwo">
@@ -165,6 +167,16 @@
         $(function() {
             console.log('introOffset: ' + introOffset.left)
             // $('#neoIntro').css('margin-left', introLeft)
+
+
+
+            $('#neoVideos .revealer').click(function() {
+                console.log('show')
+                $('#neoVideos .hidden').slideToggle()
+            })
+
+
+
         })
 
 		// var scroller = $('h2');
