@@ -79,17 +79,48 @@
 }
 
 
-$dropShadow: 2px 2px black;
+$dropShadow: 1px 1px black;
+$dropShadow: 2px 0px black;
 
 
 
-html {
-    background: url(../images/barclays.jpg) repeat-x center center fixed;
+body:after {
+    content:"";
+    position:fixed; /* stretch a fixed position to the whole screen */
+    top:0;
+    height:100vh; /* fix for mobile browser address bar appearing disappearing */
+    left:0;
+    right:0;
+    z-index:-1; /* needed to keep in the background */
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    background-attachment: fixed;
+    background: url(../images/barclays.jpg) center center;
+    // background-attachment: fixed;
 }
 
 #neoHome {
+    // font-family: prometo, sans-serif;
+    // font-family: mr-eaves-xl-modern, sans-serif;
+    // font-family: mr-eaves-xl-sans, sans-serif;
+    // font-family: "Helvetica Neue";
+    // font-family: univia-pro, sans-serif;
+    // font-family: mr-eaves-xl-sans-narrow, sans-serif;
+    // font-family: bc-alphapipe, sans-serif;
+    // font-family: century-gothic, sans-serif;
+    // font-family: gibbs, sans-serif;
+    font-family: regulator-nova, sans-serif;
+    // font-weight: 800;
+    // font-weight: 700;
+    // font-weight: 600;
+    // font-weight: 500;
+    // font-weight: 400;
+    // font-weight: 300;
+    // font-weight: 200;
+    // font-weight: 100;
+    color: #ff0a57;
+    font-style: normal;
     *,
     *:before,
     *:after {
@@ -98,29 +129,79 @@ html {
     img {
         display: block;
     }
+    h1 {
+        grid-area: neoLogo;
+        justify-self: start;
+        align-self: end;
+        margin: 0 1% 0 0;
+        margin-right: -6%;
+        font-family: gpkn;
+        font-weight: 900;
+        font-size: 60px;
+        color: #ff0151;
+        text-shadow: $dropShadow;
+        z-index: 2;
+    }
+    h2 {
+        grid-area: pov;
+        align-self: start;
+        display: inline;
+        margin: 4% 0 0 35px;
+        padding: 0 10px 0 10px;
+        // font-weight: 800;
+        font-weight: 700;
+        // font-weight: 600;
+        // font-weight: 500;
+        // font-weight: 400;
+        font-size: 7.6vw;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        text-shadow: $dropShadow;
+        z-index: 2;
+    }
+    h3 {
+        margin: 0 0 7px;
+        padding: 0;
+        // font-size: 4.5vw;
+        font-size: 25px;
+        // color: #FF3776;
+        line-height: 1.2;
+        text-shadow: $dropShadow;
+    }
+    h4 {
+        margin: 5px 0 0;
+        // font-size: 3.2vw;
+        font-size: 21px;
+        line-height: 1.2;
+        // color: #FF3776;
+        text-shadow: $dropShadow;
+    }
+    p {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 21px;
+        // font-weight: 400;
+        font-weight: 300;
+        line-height: 1.5;
+        &:not(:first-of-type) {
+            // padding-top: 20px;
+        }
+    }
+    .neoCopySect {
+        margin-top: 20px;
+        padding: 15px 20px;
+        background: rgba(0,0,0,0.8);
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
     #neoMain {
         max-width: 1280px;
         margin: 30px auto 0;
+
         #neoGrid {
-            #neoHero {
-                grid-area: neoHero;
-                display: grid;
-                grid-template-columns: 90px 1fr 1fr;
-                grid-template-rows: 120px 300px;
-                grid-template-areas: 
-                    "neoLogo neoLogo circ" 
-                    "pov pov pov";
-                .rect {
-                    // display: none;
-                }
-            }
-            // font-family: prometo, sans-serif;
-            // font-family: mr-eaves-xl-modern, sans-serif;
-            // font-family: mr-eaves-xl-sans, sans-serif;
-            font-family: univia-pro, sans-serif;
-            font-weight: 400;
-            color: #ff0151;
-            font-style: normal;
+            h2 {
+        }
             a {
                 color: #FF7E5E;
                 // color: #ff0151;
@@ -130,55 +211,44 @@ html {
                 // border-color: #ff623b;
                 // border-color: #ff0151;
             }
-            h1 {
-                grid-area: neoLogo;
-                justify-self: start;
-                align-self: end;
-                margin: 0 1% 0  0;
-                font-family: gpkn;
-                font-weight: 900;
-                font-size: 60px;
-                text-shadow: $dropShadow;
-                z-index: 2;
-            }
-            h2 {
-                grid-area: pov;
-                align-self: start;
-                display: inline;
-                margin: 4% 0 0 35px;
-                padding: 0 10px 0 10px;
-                font-weight: 800;
-                font-size: 7.6vw;
-                letter-spacing: 1px;
-                line-height: 1.2;
-                text-shadow: $dropShadow;
-                z-index: 2;
-            }
-            h3 {
-                margin: 0 0 7px;
-                padding: 0;
-                // font-size: 4.5vw;
-                font-size: 29px;
-                // color: #FF3776;
-                line-height: 1;
-                text-shadow: $dropShadow;
-            }
-            h4 {
-                margin: 5px 0 10px;
-                // font-size: 3.2vw;
-                font-size: 23px;
-                // color: #FF3776;
-                text-shadow: $dropShadow;
-            }
-            p {
-                margin: -4px 0 0;
-                // font-family: mr-eaves-xl-modern, sans-serif;
-                // font-size: 2.9vw;
-                font-size: 21px;
-                font-weight: 400;
-                line-height: 1.5;
-                &:not(:first-of-type) {
-                    padding-top: 20px;
+            // p {
+            //     margin: -4px 0 0;
+            //     // font-family: mr-eaves-xl-modern, sans-serif;
+            //     // font-size: 2.9vw;
+            //     font-size: 21px;
+            //     font-weight: 400;
+            //     line-height: 1.5;
+            //     &:not(:first-of-type) {
+            //         padding-top: 20px;
+            //     }
+            // }
+
+
+
+
+
+
+
+
+            // ————————————————————————————————————o————————————————————————————————————o HERO -->
+            // HERO -->
+            // ————————————————————————————————————o————————————————————————————————————o HERO -->
+            #neoHero {
+                height: 100vh;
+                .neonLogo {
+                    width: 300px;
+                    margin: 70px 0 0 10px;
+                    z-index: 2;
+                }
+                .heroContent {
+                    grid-area: neoHero;
+                    display: grid;
+                    grid-template-columns: 90px 1fr 1fr;
+                    grid-template-rows: 120px 300px;
+                    grid-template-areas: 
+                        "neoLogo neoLogo circ" 
+                        "pov pov pov";
+                    padding-top: 12%;
                 }
             }
 
@@ -198,11 +268,25 @@ html {
                 width: 180%;
                 // transform: rotate(118deg);
                 z-index: 1;
+                opacity: 0.9;
+                // background:white;
 
             }
             .rect {
                 visibility: hidden;
                 display: none;
+            }
+
+
+
+
+            .revealer {
+                color: #FF7E5E;
+                cursor: pointer;
+            }
+            .hidden {
+                display: none;
+                // padding-top: 20px;
             }
 
 
@@ -214,34 +298,67 @@ html {
             // ————————————————————————————————————o————————————————————————————————————o INRO -->
             // INRO -->
             // ————————————————————————————————————o————————————————————————————————————o INRO -->
+            // #neoIntro {
+            //     // width: 51%;
+            //     // width: 66%;
+            //     // display: grid;
+            //     grid-template-columns: 1fr 66%;
+            //     grid-template-areas: "introCirc introCopy";
+            //     grid-column-gap: 50px;
+            //     overflow: hidden;
+            //     height: 100vh;
+            //     margin: 200px 0;
+            //     .introCirc {
+            //         grid-area: introCirc;
+            //         justify-self: start;
+            //         // width: 100%;
+            //         float: left;
+            //         width: 39%;
+            //         margin-top: 280px;
+            //         // margin-left: 0;
+            //         margin-left: 30px;
+            //         transform: rotate(118deg);
+            //         border-radius: 50%;
+            //         float: left;
+            //     }
+            //     .neoCopySect {
+            //         grid-area: introCopy;
+            //         // width: 100%;
+            //         // padding-right: 30px;
+            //         width: 53%;
+            //         float: right;
+            //     }
+            // }
+
+            .introCirc {
+                display: none;
+                position: absolute;
+                width: 74%;
+                margin-left: 120px;
+                transform: rotate(118deg);
+                border-radius: 50%;
+                z-index: 1;
+            }
             #neoIntro {
                 // width: 51%;
                 // width: 66%;
-                margin: 200px 0;
                 // display: grid;
-                grid-template-columns: 1fr 66%;
-                grid-template-areas: "introCirc introCopy";
-                grid-column-gap: 50px;
+                // grid-template-columns: 1fr 66%;
+                // grid-template-areas: "introCirc introCopy";
+                // grid-column-gap: 50px;
+                display: block;
                 overflow: hidden;
-                .introCirc {
-                    grid-area: introCirc;
-                    justify-self: start;
-                    // width: 100%;
-                    float: left;
-                    width: 39%;
-                    margin-top: 280px;
-                    // margin-left: 0;
-                    margin-left: 30px;
-                    transform: rotate(118deg);
-                    border-radius: 50%;
-                    float: left;
-                }
+                position: relative;
+                height: auto;
+                height: calc(100vh + 170px);
+                min-height: 100vh;
+                margin: 0;
+                margin-bottom: 100px;
+                // margin: 200px 0;
                 .neoCopySect {
-                    grid-area: introCopy;
-                    // width: 100%;
-                    // padding-right: 30px;
-                    width: 53%;
-                    float: right;
+                    position: absolute;
+                    // margin-top: 170px;
+                    z-index: 2;
                 }
             }
 
@@ -292,22 +409,6 @@ html {
                     }
                 }
             }
-            .neoCopySect {
-                margin-top: 20px;
-                padding: 10px;
-                background: rgba(0,0,0,0.8);
-                &:first-child {
-                    margin-bottom: 0;
-                }
-            }
-            .revealer {
-                color: #FF7E5E;
-                cursor: pointer;
-            }
-            .hidden {
-                display: none;
-                padding-top: 20px;
-            }
 
 
 
@@ -328,9 +429,9 @@ html {
                 }
                 img {
                     float: left;
-                    padding: 0 10px 10px 0;
+                    padding: 0 15px 20px 0;
                     width: 33.3333%;
-                    width: 32%;
+                    width: 29%;
                     max-width: 260px;
                 }
                 p {
@@ -338,6 +439,7 @@ html {
                 }
                 .neoBio {
                     display: inline-block;
+                    padding-top: 20px;
                 }
 
                 .bioRay {
@@ -398,7 +500,7 @@ html {
                     grid-area: neoLogo;
                     justify-self: end;
                     align-self: end;
-                    margin: 0 -1% 0 0;
+                    // margin: 0 -1% 0 0;
                     font-size: 11.3vw;
                     line-height: 0.7;
                 }
@@ -435,9 +537,9 @@ html {
                     margin: 2.8vw 0 0 0;
                     visibility: visible;
                 }
-                .neoCopySect {
-                    padding: 20px 20px 20px;
-                }
+                // .neoCopySect {
+                //     padding: 20px;
+                // }
                 #neoBios {
                     img {
                         margin: 0 10px 10px 0;

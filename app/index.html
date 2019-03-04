@@ -45,10 +45,13 @@
 					<!-- HERO -->
 				<!-- ————————————————————————————————————o————————————————————————————————————o HERO -->
 				<article id="neoHero">
-					<h1>neoneon</h1>
-					<img class="circ" src="images/o01c.jpg" />
-					<img class="rect" src="images/i01c.jpg" />
-					<h2>Synthesizing dream-like experiences that dissolve the line between art and technology</h2>
+                    <div class="heroContent">
+                        <!-- <h1>neoneon</h1> -->
+                        <img class=neonLogo src="images/neoneonLogo.png" />
+                        <img class="circ" src="images/o01c.jpg" />
+                        <img class="rect" src="images/i01c.jpg" />
+                        <h2>Synthesizing dream-like experiences that dissolve the line between art and technology</h2>
+                    </div>
 				</article>
 
 
@@ -59,9 +62,12 @@
 				<!-- ————————————————————————————————————o————————————————————————————————————o INTRO -->
 					<!-- INTRO -->
 				<!-- ————————————————————————————————————o————————————————————————————————————o INTRO -->
-				<article id="neoIntro">
-                    <img class="introCirc" src="images/o02a.jpg" />
-					<p class="neoCopySect">We are a team of experimental digital artists based in New York City. Combining years of experience in music event programming, graphic design, sound engineering, coding, and DJ'ing we are exploring the intersection between sound, movement, and shape. Driven by a deep connection with dance music culture, we are working to create a unique fusion of live performance and interactive audio-visual environments using emerging technologies like augmented and virtual reality, projection mapping, and contextual sensors. Our passion for music has previously manifested in a series of loft parties called Sound Noir – it is through those events that we have developed our vision of incorporating sonic and visual elements with moving bodies, while connecting with a network of talented musicians and performance artists.</p>
+                <img class="introCirc" src="images/o02a.jpg" />
+                <article id="neoIntro">
+					<p class="neoCopySect">We are a team of experimental digital artists based in New York City. Combining years of experience in music event programming, photography, graphic design, sound engineering, coding, and DJ'ing we are exploring the intersection between sound, movement, and shape. Driven by a deep connection with dance music culture, we are working to create a unique fusion of live performance and interactive audio-visual environments using emerging technologies like augmented and virtual reality, projection mapping, and contextual sensors. <span class="revealer">more</span></p>
+                        
+                    <div class="hidden"><p>Our passion for music has previously manifested in a series of loft parties called Sound Noir – it is through those events that we have developed our vision of incorporating sonic and visual elements with moving bodies, while connecting with a network of talented musicians and performance artists.</p>
+                        </div>
 				</article>
 
 
@@ -169,6 +175,16 @@
             // $('#neoIntro').css('margin-left', introLeft)
 
 
+            var viewportWidth = window.innerWidth;
+            var introCopyHeight = $('#neoIntro .neoCopySect').height();
+            // console.log('introHeight: ' + introHeight)
+
+
+
+            $('#neoIntro .revealer').click(function() {
+                console.log('show')
+                $('#neoIntro .hidden').slideToggle()
+            })
 
             $('#neoVideos .revealer').click(function() {
                 console.log('show')
