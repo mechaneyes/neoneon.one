@@ -1,73 +1,3 @@
-// Prometo Black
-// font-family: prometo, sans-serif;
-// font-weight: 900;
-
-// Prometo Black Italic
-// font-weight: 900;
-// font-style: italic;
-
-// Prometo Light
-// font-weight: 300;
-
-// Prometo Medium
-// font-weight: 500;
-
-// Prometo Regular
-// font-weight: 400;
-
-// Prometo Thin
-// font-weight: 200;
-
-// Prometo XBold
-// font-weight: 800;
-
-
-// 
-// 
-
-
-// Mr Eaves XL Mod OT Reg
-// font-family: mr-eaves-xl-modern, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-
-// Mr Eaves XL Mod OT Light
-// font-weight: 200;
-// font-style: normal;
-
-// Mr Eaves XL Mod OT Thin
-// font-weight: 100;
-// font-style: normal;
-
-// Mr Eaves XL San OT Reg
-// font-family: mr-eaves-xl-sans, sans-serif;
-// font-weight: 400;
-// font-style: normal;
-
-
-// 
-// 
-
-
-// Univia Pro Book
-// font-family: univia-pro, sans-serif;
-// font-weight: 400;
-
-// Univia Pro Regular
-// font-weight: 500;
-
-// Univia Pro Medium
-// font-weight: 600;
-
-// Univia Pro Bold
-// font-weight: 700;
-
-
- 
-
-
-
-
 @font-face {
     font-family: "gpkn";
     src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot");
@@ -84,7 +14,7 @@ $dropShadow: 2px 0px black;
 
 
 
-body:after {
+html:after {
     content:"";
     position:fixed; /* stretch a fixed position to the whole screen */
     top:0;
@@ -92,15 +22,18 @@ body:after {
     left:0;
     right:0;
     z-index:-1; /* needed to keep in the background */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+    background: url(../images/barclays.jpg) fixed;
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    background: url(../images/barclays.jpg) center center;
-    // background-attachment: fixed;
+}
+
+body {
+    margin: 0;
 }
 
 #neoHome {
+    margin: 10px;
     // font-family: prometo, sans-serif;
     // font-family: mr-eaves-xl-modern, sans-serif;
     // font-family: mr-eaves-xl-sans, sans-serif;
@@ -199,9 +132,6 @@ body:after {
         max-width: 1280px;
         margin: 30px auto 0;
 
-        #neoGrid {
-            h2 {
-        }
             a {
                 color: #FF7E5E;
                 // color: #ff0151;
@@ -237,7 +167,7 @@ body:after {
                 height: 100vh;
                 .neonLogo {
                     width: 300px;
-                    margin: 70px 0 0 10px;
+                    margin: 70px 0 0 0;
                     z-index: 2;
                 }
                 .heroContent {
@@ -248,8 +178,26 @@ body:after {
                     grid-template-areas: 
                         "neoLogo neoLogo circ" 
                         "pov pov pov";
-                    padding-top: 12%;
+                    padding-top: 2%;
                 }
+                h2 {
+                    margin: 4% 0 0 15px;
+                }
+            }
+            .circ {
+                grid-area: circ;
+                justify-self: end;
+                border-radius: 50%;
+                width: 180%;
+                // transform: rotate(118deg);
+                z-index: 1;
+                opacity: 0.8;
+                // background:white;
+
+            }
+            .rect {
+                visibility: hidden;
+                display: none;
             }
 
 
@@ -261,21 +209,7 @@ body:after {
             // ————————————————————————————————————o————————————————————————————————————o PRISMS -->
             // PRISMS -->
             // ————————————————————————————————————o————————————————————————————————————o PRISMS -->
-            .circ {
-                grid-area: circ;
-                justify-self: end;
-                border-radius: 50%;
-                width: 180%;
-                // transform: rotate(118deg);
-                z-index: 1;
-                opacity: 0.9;
-                // background:white;
 
-            }
-            .rect {
-                visibility: hidden;
-                display: none;
-            }
 
 
 
@@ -350,13 +284,13 @@ body:after {
                 overflow: hidden;
                 position: relative;
                 height: auto;
-                height: calc(100vh + 170px);
+                // height: calc(100vh + 170px);
                 min-height: 100vh;
                 margin: 0;
                 margin-bottom: 100px;
                 // margin: 200px 0;
                 .neoCopySect {
-                    position: absolute;
+                    // position: absolute;
                     // margin-top: 170px;
                     z-index: 2;
                 }
@@ -431,7 +365,7 @@ body:after {
                     float: left;
                     padding: 0 15px 20px 0;
                     width: 33.3333%;
-                    width: 29%;
+                    // width: 29%;
                     max-width: 260px;
                 }
                 p {
@@ -470,7 +404,7 @@ body:after {
                     margin: 0 0 20px;
                 }
             }
-        }
+        // }
     }
 
 
@@ -551,57 +485,68 @@ body:after {
             }
         }
     }
-    @media (min-width: 680px) {
-        #neoMain #neoGrid {
+}
+
+@media (min-width: 680px) {
+    #neoMain #neoGrid {
+        p {
+            // font-size: 19px;
+        }
+    }
+}
+
+
+
+
+
+
+
+// ————————————————————————————————————o————————————————————————————————————o 999px -->
+// ————————————————————————————————————o————————————————————————————————————o 999px -->
+// 999px -->
+// ————————————————————————————————————o————————————————————————————————————o 999px -->
+// ————————————————————————————————————o————————————————————————————————————o 999px -->
+@media (min-width: 999px) {
+    html:after {
+        // content:none;
+    }
+    html {
+        background: url(../images/barclays.jpg) fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #neoHome #neoMain {
+        #neoGrid {
+            h3 {
+                // font-size: 37px;
+            }
+            h4 {
+                // font-size: 29px;
+            }
             p {
-                // font-size: 19px;
+                // font-size: 26px;
+            }
+            #neoBios {
+                width: 100%;
+                .bioRay {
+                    // margin: 0 0 20px;
+                }
+                .bioAndrey {
+                    margin: 0;
+                }
+                img {
+                    width: 33.3333%;
+                    margin: 0 10px 0 0;
+                    padding-bottom: 0;
+                }
             }
         }
-    }
-
-
-
-
-
-
-
-    // ————————————————————————————————————o————————————————————————————————————o 999px -->
-    // ————————————————————————————————————o————————————————————————————————————o 999px -->
-    // 999px -->
-    // ————————————————————————————————————o————————————————————————————————————o 999px -->
-    // ————————————————————————————————————o————————————————————————————————————o 999px -->
-    @media (min-width: 999px) {
-        #neoMain {
-            #neoGrid {
-                h3 {
-                    // font-size: 37px;
-                }
-                h4 {
-                    // font-size: 29px;
-                }
-                p {
-                    // font-size: 26px;
-                }
-                #neoBios {
-                    width: 100%;
-                    .bioRay {
-                        // margin: 0 0 20px;
-                    }
-                    .bioAndrey {
-                        margin: 0;
-                    }
-                    img {
-                        width: 33.3333%;
-                        margin: 0 10px 0 0;
-                        padding-bottom: 0;
-                    }
-                }
-            }
-            .videoWrapper iframe {
-                max-height: 100vh;
-            }
+        .videoWrapper iframe {
+            max-height: 100vh;
         }
     }
+}
 
 
 
@@ -609,27 +554,27 @@ body:after {
 
 
 
-    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
-    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
-    // 1090px -->
-    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
-    // ————————————————————————————————————o————————————————————————————————————o 1090px -->
-    @media (min-width: 1090px) {
-        #neoMain {
-            #neoGrid {
-                #neoBios {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows: auto;
-                    grid-gap: 10px;
-                    width: 100%;
-                    .bioRay {
-                        margin: 0;
-                    }
+// ————————————————————————————————————o————————————————————————————————————o 1090px -->
+// ————————————————————————————————————o————————————————————————————————————o 1090px -->
+// 1090px -->
+// ————————————————————————————————————o————————————————————————————————————o 1090px -->
+// ————————————————————————————————————o————————————————————————————————————o 1090px -->
+@media (min-width: 1090px) {
+    #neoMain {
+        #neoGrid {
+            #neoBios {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto;
+                grid-gap: 10px;
+                width: 100%;
+                .bioRay {
+                    margin: 0;
                 }
             }
         }
     }
+}
 
 
 
@@ -637,31 +582,31 @@ body:after {
 
 
 
-    // ————————————————————————————————————o————————————————————————————————————o BIG -->
-    // ————————————————————————————————————o————————————————————————————————————o BIG -->
-    // BIG -->
-    // ————————————————————————————————————o————————————————————————————————————o BIG -->
-    // ————————————————————————————————————o————————————————————————————————————o BIG -->
-    @media (min-width: 1281px) {
-        #neoMain {
-            #neoGrid {
-                h1 {
-                    font-size: 145px;
-                }
-                h2 {
-                    padding-right: 50px;
-                    font-size: 56px;
-                }
-            }
-        }
-    }
-    @media (min-width: 1880px) {
-        #neoMain {
+// ————————————————————————————————————o————————————————————————————————————o BIG -->
+// ————————————————————————————————————o————————————————————————————————————o BIG -->
+// BIG -->
+// ————————————————————————————————————o————————————————————————————————————o BIG -->
+// ————————————————————————————————————o————————————————————————————————————o BIG -->
+@media (min-width: 1281px) {
+    #neoMain {
+        #neoGrid {
             h1 {
-                font-size: 198px;
+                font-size: 145px;
+            }
+            h2 {
+                padding-right: 50px;
+                font-size: 56px;
             }
         }
     }
+}
+@media (min-width: 1880px) {
+    #neoMain {
+        h1 {
+            font-size: 198px;
+        }
+    }
+}
 
 
 
@@ -669,16 +614,15 @@ body:after {
 
 
 
-    // ————————————————————————————————————o————————————————————————————————————o VERT -->
-    // ————————————————————————————————————o————————————————————————————————————o VERT -->
-    // VERT -->
-    // ————————————————————————————————————o————————————————————————————————————o VERT -->
-    // ————————————————————————————————————o————————————————————————————————————o VERT -->
-    @media (max-height: 1024px) {
-        #neoMain {
-            .videoWrapper iframe {
-                max-height: none;
-            }
+// ————————————————————————————————————o————————————————————————————————————o VERT -->
+// ————————————————————————————————————o————————————————————————————————————o VERT -->
+// VERT -->
+// ————————————————————————————————————o————————————————————————————————————o VERT -->
+// ————————————————————————————————————o————————————————————————————————————o VERT -->
+@media (max-height: 1024px) {
+    #neoMain {
+        .videoWrapper iframe {
+            max-height: none;
         }
     }
 }
