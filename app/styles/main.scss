@@ -1,29 +1,28 @@
-@font-face {
-    font-family: "gpkn";
-    src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot");
-    src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot?#iefix") format("embedded-opentype"),
-    url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.woff2") format("woff2"),
-    url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.woff") format("woff"),
-    url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.ttf") format("truetype"),
-    url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.svg#gpkn") format("svg");
-}
-
+// @font-face {
+//     font-family: "gpkn";
+//     src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot");
+//     src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot?#iefix") format("embedded-opentype"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.woff2") format("woff2"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.woff") format("woff"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.ttf") format("truetype"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.svg#gpkn") format("svg");
+// }
 
 $dropShadow: 1px 1px black;
 $dropShadow: 2px 0px black;
 
-
-
 html:after {
-    content:"";
-    position:fixed; /* stretch a fixed position to the whole screen */
-    top:0;
-    height:100vh; /* fix for mobile browser address bar appearing disappearing */
-    left:0;
-    right:0;
-    z-index:-1; /* needed to keep in the background */
-    background: url(../images/barclays.jpg);
-    // background-attachment: fixed;
+    content: "";
+    position: fixed;
+    /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh;
+    /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* needed to keep in the background */
+    background: url(../images/barclays.jpg); // background-attachment: fixed;
     background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
@@ -35,8 +34,7 @@ body {
 }
 
 #neoHome {
-    margin: 10px;
-    // font-family: prometo, sans-serif;
+    margin: 20px; // font-family: prometo, sans-serif;
     // font-family: mr-eaves-xl-modern, sans-serif;
     // font-family: mr-eaves-xl-sans, sans-serif;
     // font-family: "Helvetica Neue";
@@ -89,25 +87,20 @@ body {
     h3 {
         margin: 0 0 7px;
         padding: 0;
-        // font-size: 4.5vw;
         font-size: 25px;
-        // color: #FF3776;
         line-height: 1.2;
         text-shadow: $dropShadow;
     }
     h4 {
         margin: 5px 0 0;
-        // font-size: 3.2vw;
         font-size: 21px;
         line-height: 1.2;
-        // color: #FF3776;
         text-shadow: $dropShadow;
     }
     p {
         margin: 0;
         padding: 10px 0;
         font-size: 21px;
-        // font-weight: 400;
         font-weight: 300;
         line-height: 1.5;
         &:not(:first-of-type) {
@@ -117,7 +110,7 @@ body {
     .neoCopySect {
         margin-top: 20px;
         padding: 15px 20px;
-        background: rgba(0,0,0,0.8);
+        background: rgba(0, 0, 0, 0.8);
         &:first-child {
             margin-bottom: 0;
         }
@@ -126,436 +119,272 @@ body {
         position: relative;
         max-width: 1280px;
         margin: 0 auto;
-
-            a {
-                color: #FF7E5E;
-                // color: #ff0151;
-                // color: #ff623b;
-                text-decoration: none;
-                border-bottom: 1px solid #FF7E5E;
-                // border-color: #ff623b;
-                // border-color: #ff0151;
-            }
-            // p {
-            //     margin: -4px 0 0;
-            //     // font-family: mr-eaves-xl-modern, sans-serif;
-            //     // font-size: 2.9vw;
-            //     font-size: 21px;
-            //     font-weight: 400;
-            //     line-height: 1.5;
-            //     &:not(:first-of-type) {
-            //         padding-top: 20px;
-            //     }
-            // }
-
-
-
-
-
-
-
-
-            // ————————————————————————————————————o————————————————————————————————————o HERO -->
-            // HERO -->
-            // ————————————————————————————————————o————————————————————————————————————o HERO -->
-            #neoHero {
-                height: 100vh;
-                padding-left: 10px;
-                position: relative;
-                .heroContent {
-                    position: absolute;
-                    height: 100%;
-                    height: 500px;
-                    margin-top: 42%;
-                    z-index: 1;
-                    .neoLogo {
-                        display: block;
-                        width: 300px;
-                        margin-bottom: 15px;
-                    }
-                    h2 {
-                        position: relative;
-                    }
-                }
-                .circ {
-                    // grid-area: circ;
-                    // justify-self: end;
-                    position: absolute;
-                    top: 4%;
-                    right: 0;
-                    border-radius: 50%;
-                    width: 70%;
-                    // transform: rotate(118deg);
-                    z-index: 0;
-                    opacity: 0.9;
-    
-                }
-                .rect {
-                    visibility: hidden;
-                    display: none;
-                }
-            }
-
-
-
-
-
-
-
-            // ————————————————————————————————————o————————————————————————————————————o PRISMS -->
-            // PRISMS -->
-            // ————————————————————————————————————o————————————————————————————————————o PRISMS -->
-
-
-
-
-
-            .revealer {
-                color: #FF7E5E;
-                cursor: pointer;
-            }
-            .hidden {
-                display: none;
-                // padding-top: 20px;
-            }
-
-
-
-
-
-
-
-            // ————————————————————————————————————o————————————————————————————————————o INRO -->
-            // INRO -->
-            // ————————————————————————————————————o————————————————————————————————————o INRO -->
-            // #neoIntro {
-            //     // width: 51%;
-            //     // width: 66%;
-            //     // display: grid;
-            //     grid-template-columns: 1fr 66%;
-            //     grid-template-areas: "introCirc introCopy";
-            //     grid-column-gap: 50px;
-            //     overflow: hidden;
-            //     height: 100vh;
-            //     margin: 200px 0;
-            //     .introCirc {
-            //         grid-area: introCirc;
-            //         justify-self: start;
-            //         // width: 100%;
-            //         float: left;
-            //         width: 39%;
-            //         margin-top: 280px;
-            //         // margin-left: 0;
-            //         margin-left: 30px;
-            //         transform: rotate(118deg);
-            //         border-radius: 50%;
-            //         float: left;
-            //     }
-            //     .neoCopySect {
-            //         grid-area: introCopy;
-            //         // width: 100%;
-            //         // padding-right: 30px;
-            //         width: 53%;
-            //         float: right;
-            //     }
-            // }
-
-            .introCirc {
-                display: none;
+        a {
+            color: #FF7E5E; // color: #ff0151;
+            // color: #ff623b;
+            text-decoration: none;
+            border-bottom: 1px solid #FF7E5E; // border-color: #ff623b;
+            // border-color: #ff0151;
+        }
+        // ————————————————————————————————————o————————————————————————————————————o HERO -->
+        // HERO -->
+        // ————————————————————————————————————o————————————————————————————————————o HERO -->
+        #neoHero {
+            height: 100vh; // padding-left: 10px;
+            position: relative;
+            .heroContent {
                 position: absolute;
-                width: 74%;
-                margin-left: 120px;
-                transform: rotate(118deg);
-                border-radius: 50%;
-                z-index: 1;
-            }
-            #neoIntro {
-                // width: 51%;
-                // width: 66%;
-                // display: grid;
-                // grid-template-columns: 1fr 66%;
-                // grid-template-areas: "introCirc introCopy";
-                // grid-column-gap: 50px;
-                display: block;
-                overflow: hidden;
-                position: relative;
-                height: auto;
-                // height: calc(100vh + 170px);
-                // min-height: 100vh;
-                margin: 0;
-                margin-bottom: 100px;
-                // margin: 200px 0;
-                .neoCopySect {
-                    // position: absolute;
-                    // margin-top: 170px;
-                    z-index: 2;
-                }
-            }
-
-
-
-
-
-
-            // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
-            // VIDEOS -->
-            // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
-            #neoVideos {
-                grid-area: neoVideos;
-                margin-bottom: 100px;
-            }
-            .neoVid {
-                grid-area: neoVid;
-            }
-            .videoWrapper {
-                // grid-area: neoVid;
-                position: relative;
-                padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-                // padding-bottom: 75%;    /* 4:3 */
-                height: 0;
-                // max-height: 100vh;
-            }
-            .videoWrapper iframe {
-                position: absolute;
-                // position: relative;
-                top: 0;
-                left: 0;
-                width: 100%;
                 height: 100%;
-                // max-height: 100vh;
-            }
-            .videoOne {
-                grid-area: videoOne;
-                // margin-top: 50px;
-                margin-bottom: 50px;
-            }
-            .videoTwo {
-                grid-area: videoTwo;
-                .videoWrapper {
-                    padding-bottom: 75%;    /* 4:3 */
-                    iframe {
-                        float: left;
-                        // max-height: calc(100vh - 40px);
-                    }
-                }
-            }
-
-
-
-
-
-
-
-            // ————————————————————————————————————o————————————————————————————————————o BIOS -->
-            // BIOS -->
-            // ————————————————————————————————————o————————————————————————————————————o BIOS -->
-            #neoBios {
-                grid-area: neoBios;
-                max-width: 1700px;
-                // margin-top: 60px;
-                overflow: hidden;
-                .neoBio {
-                    display: inline-block;
-                }
-                img {
-                    float: left;
-                    padding: 0 15px 20px 0;
-                    width: 33.3333%;
-                    // width: 29%;
-                    max-width: 260px;
-                }
-                p {
+                height: 500px;
+                margin-top: 42%;
+                z-index: 1;
+                .neoLogo {
                     display: block;
+                    width: 300px;
+                    width: 87%;
+                    margin-bottom: 15px;
                 }
-                .neoBio {
-                    display: inline-block;
-                    padding-top: 20px;
-                }
-                .nameDesc {
-                    display: block;
-                }
-                .bioRay {
-                    // grid-area: bioRay;
-                    margin-bottom: 10px;
-                }
-                .bioAndrey {
-                    // grid-area: bioAndrey;
+                h2 {
+                    position: relative;
                 }
             }
-
-
-
-
-
-
-
-            // ————————————————————————————————————o————————————————————————————————————o CONTACT -->
-            // CONTACT -->
-            // ————————————————————————————————————o————————————————————————————————————o CONTACT -->
-            #neoContact {
-                display: block;
-                grid-area: neoContact;
-                max-width: 1420px;
-                margin: 100px 0 40px;
-                padding-bottom: 30px;
-                p:first-child {
-                    margin: 0 0 10px;
-                }
+            .circ {
+                // grid-area: circ;
+                // justify-self: end;
+                position: absolute;
+                top: 4%;
+                right: 0;
+                border-radius: 50%;
+                width: 70%;
+                max-width: 536px; // transform: rotate(118deg);
+                z-index: 0;
+                opacity: 0.9;
             }
-        // }
-    }
-
-
-
-
-
-
-
-    // ————————————————————————————————————o————————————————————————————————————o 550px -->
-    // ————————————————————————————————————o————————————————————————————————————o 550px -->
-    // 550px -->
-    // ————————————————————————————————————o————————————————————————————————————o 550px -->
-    // ————————————————————————————————————o————————————————————————————————————o 550px -->
-    @media (min-width: 600px) {
-        #neoMain {
-            h4 {
-                margin-bottom: 20px; // font-size: 3.1vw;
-                line-height: 1.1;
-            }
-            #neoHero {
-                .heroContent {
-                    margin-top: 34%;
-                    .neoLogo {
-                        width: 78%;
-                        padding-bottom: 10px;
-                    }
-                    h2 {
-                        padding-right: 20px;
-                        font-size: 5.5vw;
-                    }
-                }
-                .rect {
-                    display: block;
-                    display: none;
-                    grid-area: rect;
-                    justify-self: end;
-                    align-self: start;
-                    width: 54%;
-                    margin: 2.8vw 0 0 0;
-                    visibility: visible;
-                }
-            }
-            // .circ {
-            //     grid-area: circ;
-            //     justify-self: start;
-            //     width: 88%;
-            //     margin-left: -7%;
-            // }
-            #neoBios {
-                img {
-                    margin: 0 10px 10px 0;
-                    padding-bottom: 0;
-                    width: 33.3333%;
-                }
+            .rect {
+                visibility: hidden;
+                display: none;
             }
         }
-    }
-}
-
-@media (min-width: 680px) {
-    #neoMain #neoGrid {
-        p {
-            // font-size: 19px;
+        // ————————————————————————————————————o————————————————————————————————————o PRISMS -->
+        // PRISMS -->
+        // ————————————————————————————————————o————————————————————————————————————o PRISMS -->
+        .revealer {
+            color: #FF7E5E;
+            cursor: pointer;
         }
-    }
-}
-
-
-
-
-
-
-
-// ————————————————————————————————————o————————————————————————————————————o 999px -->
-// ————————————————————————————————————o————————————————————————————————————o 999px -->
-// 999px -->
-// ————————————————————————————————————o————————————————————————————————————o 999px -->
-// ————————————————————————————————————o————————————————————————————————————o 999px -->
-@media (min-width: 999px) {
-    html:after {
-        // content:none;
-    }
-    html {
-        background: url(../images/barclays.jpg) fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
-    #neoHome #neoMain {
-        #neoGrid {
-            h3 {
-                // font-size: 37px;
+        .hidden {
+            display: none;
+        }
+        // ————————————————————————————————————o————————————————————————————————————o INRO -->
+        // INRO -->
+        // ————————————————————————————————————o————————————————————————————————————o INRO -->
+        .introCirc {
+            display: none;
+            position: absolute;
+            width: 74%;
+            margin-left: 120px;
+            transform: rotate(118deg);
+            border-radius: 50%;
+            z-index: 1;
+        }
+        #neoIntro {
+            display: block;
+            overflow: hidden;
+            position: relative;
+            height: auto; // height: calc(100vh + 170px);
+            // min-height: 100vh;
+            margin: 0;
+            margin-bottom: 100px; // margin: 200px 0;
+            .neoCopySect {
+                // position: absolute;
+                // margin-top: 170px;
+                z-index: 2;
             }
-            h4 {
-                // font-size: 29px;
+        } // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
+        // VIDEOS -->
+        // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
+        #neoVideos {
+            grid-area: neoVideos;
+            margin-bottom: 100px;
+        }
+        .neoVid {
+            grid-area: neoVid;
+        }
+        .videoWrapper {
+            // grid-area: neoVid;
+            position: relative;
+            padding-bottom: 56.25%;
+            /* 16:9 Aspect Ratio */
+            // padding-bottom: 75%;    /* 4:3 */
+            height: 0; // max-height: 100vh;
+        }
+        .videoWrapper iframe {
+            position: absolute; // position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%; // max-height: 100vh;
+        }
+        .videoOne {
+            grid-area: videoOne; // margin-top: 50px;
+            margin-bottom: 50px;
+        }
+        .videoTwo {
+            grid-area: videoTwo;
+            .videoWrapper {
+                padding-bottom: 75%;
+                /* 4:3 */
+                iframe {
+                    float: left; // max-height: calc(100vh - 40px);
+                }
+            }
+        } // ————————————————————————————————————o————————————————————————————————————o BIOS -->
+        // BIOS -->
+        // ————————————————————————————————————o————————————————————————————————————o BIOS -->
+        #neoBios {
+            grid-area: neoBios;
+            max-width: 1700px; // margin-top: 60px;
+            overflow: hidden;
+            .neoBio {
+                display: inline-block;
+            }
+            img {
+                float: left;
+                padding: 0 15px 20px 0;
+                width: 33.3333%; // width: 29%;
+                max-width: 260px;
             }
             p {
-                // font-size: 26px;
+                display: block;
             }
-            #neoBios {
-                width: 100%;
-                .bioRay {
-                    // margin: 0 0 20px;
+            .neoBio {
+                display: inline-block;
+                padding-top: 20px;
+            }
+            .nameDesc {
+                display: block;
+            }
+            .bioRay {
+                // grid-area: bioRay;
+                margin-bottom: 10px;
+            }
+            .bioAndrey {
+                // grid-area: bioAndrey;
+            }
+        } // ————————————————————————————————————o————————————————————————————————————o CONTACT -->
+        // CONTACT -->
+        // ————————————————————————————————————o————————————————————————————————————o CONTACT -->
+        #neoContact {
+            display: block;
+            grid-area: neoContact;
+            max-width: 1420px;
+            margin: 100px 0 40px;
+            padding-bottom: 30px;
+            p:first-child {
+                margin: 0 0 10px;
+            }
+        }
+    }
+}
+
+// ————————————————————————————————————o————————————————————————————————————o 600px -->
+// ————————————————————————————————————o————————————————————————————————————o 600px -->
+// 600px -->
+// ————————————————————————————————————o————————————————————————————————————o 600px -->
+// ————————————————————————————————————o————————————————————————————————————o 600px -->
+@media (min-width: 600px) {
+    #neoHome #neoMain {
+        h4 {
+            // margin-bottom: 20px;
+            line-height: 1.1;
+        }
+        #neoHero {
+            .heroContent {
+                margin-top: 27%;
+                .neoLogo {
+                    width: 78%;
+                    padding-bottom: 10px;
                 }
-                .bioAndrey {
-                    margin: 0;
+                h2 {
+                    padding-right: 20px;
+                    font-size: 5.5vw;
                 }
-                img {
-                    width: 33.3333%;
-                    margin: 0 10px 0 0;
-                    padding-bottom: 0;
+            }
+            .rect {
+                display: block;
+                display: none;
+                grid-area: rect;
+                justify-self: end;
+                align-self: start;
+                width: 54%;
+                margin: 2.8vw 0 0 0;
+                visibility: visible;
+            }
+        } // .circ {
+        //     grid-area: circ;
+        //     justify-self: start;
+        //     width: 88%;
+        //     margin-left: -7%;
+        // }
+        #neoBios {
+            img {
+                margin: 0 10px 10px 0;
+                padding-bottom: 0;
+                width: 33.3333%;
+            }
+        }
+    }
+}
+
+// ————————————————————————————————————o————————————————————————————————————o 1050px -->
+// ————————————————————————————————————o————————————————————————————————————o 1050px -->
+// 1050px -->
+// ————————————————————————————————————o————————————————————————————————————o 1050px -->
+// ————————————————————————————————————o————————————————————————————————————o 1050px -->
+@media (min-width: 1050px) {
+    #neoHome #neoMain {
+        #neoHero {
+            .heroContent {
+                margin-top: 18%;
+                .neoLogo {
+                    width: 78%;
+                    max-width: 700px;
+                    padding-bottom: 10px;
                 }
+                h2 {
+                    padding-right: 20px;
+                    font-size: 5.5vw;
+                    font-size: 70px;
+                }
+            }
+            .circ {
+                // width: 70%;
+            }
+            .rect {
+                display: block;
+                display: none; // transform: rotate(90deg);
+                width: 54%;
+                width: 340px; // margin: 2.8vw 0 0 0;
+                margin: 0;
+                margin-left: 260px;
+                padding: 582px 0 0;
+                visibility: visible;
+                opacity: 0.9;
             }
         }
         .videoWrapper iframe {
             max-height: 100vh;
         }
-    }
-}
-
-
-
-
-
-
-
-// ————————————————————————————————————o————————————————————————————————————o 1090px -->
-// ————————————————————————————————————o————————————————————————————————————o 1090px -->
-// 1090px -->
-// ————————————————————————————————————o————————————————————————————————————o 1090px -->
-// ————————————————————————————————————o————————————————————————————————————o 1090px -->
-@media (min-width: 1090px) {
-    #neoMain {
-        #neoGrid {
-            #neoBios {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                grid-template-rows: auto;
-                grid-gap: 10px;
-                width: 100%;
-                .bioRay {
-                    margin: 0;
-                }
+        .neoCopySect {
+            .revealer {
+                display: none;
+            }
+            .hidden {
+                display: block;
             }
         }
     }
 }
-
-
-
-
-
-
 
 // ————————————————————————————————————o————————————————————————————————————o BIG -->
 // ————————————————————————————————————o————————————————————————————————————o BIG -->
@@ -575,6 +404,7 @@ body {
         }
     }
 }
+
 @media (min-width: 1880px) {
     #neoMain {
         h1 {
@@ -582,12 +412,6 @@ body {
         }
     }
 }
-
-
-
-
-
-
 
 // ————————————————————————————————————o————————————————————————————————————o VERT -->
 // ————————————————————————————————————o————————————————————————————————————o VERT -->
