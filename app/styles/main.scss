@@ -424,37 +424,38 @@ body {
             }
             #neoHero {
                 .heroContent {
+                    margin-top: 34%;
                     .neoLogo {
                         width: 78%;
                         padding-bottom: 10px;
                     }
                     h2 {
+                        padding-right: 20px;
                         font-size: 5.5vw;
                     }
                 }
+                .rect {
+                    display: block;
+                    display: none;
+                    grid-area: rect;
+                    justify-self: end;
+                    align-self: start;
+                    width: 54%;
+                    margin: 2.8vw 0 0 0;
+                    visibility: visible;
+                }
             }
-            .circ {
-                grid-area: circ;
-                justify-self: start;
-                width: 88%;
-                margin-left: -7%;
-            }
-            .rect {
-                display: block;
-                grid-area: rect;
-                justify-self: end;
-                align-self: start;
-                width: 54%;
-                margin: 2.8vw 0 0 0;
-                visibility: visible;
-            } // .neoCopySect {
-            //     padding: 20px;
+            // .circ {
+            //     grid-area: circ;
+            //     justify-self: start;
+            //     width: 88%;
+            //     margin-left: -7%;
             // }
             #neoBios {
                 img {
                     margin: 0 10px 10px 0;
                     padding-bottom: 0;
-                    width: 33.3333%; // width: 32%;
+                    width: 33.3333%;
                 }
             }
         }
