@@ -120,17 +120,20 @@ body {
         max-width: 1280px;
         margin: 0 auto;
         a {
-            color: #FF7E5E; // color: #ff0151;
-            // color: #ff623b;
+            color: #FF7E5E;
             text-decoration: none;
             border-bottom: 1px solid #FF7E5E; // border-color: #ff623b;
             // border-color: #ff0151;
+        }
+        .neoArticle {
+            // height: 70vh;
+            padding-bottom: 30vh;
         }
         // ————————————————————————————————————o————————————————————————————————————o HERO -->
         // HERO -->
         // ————————————————————————————————————o————————————————————————————————————o HERO -->
         #neoHero {
-            height: 100vh; // padding-left: 10px;
+            height: 100vh;
             position: relative;
             .heroContent {
                 position: absolute;
@@ -178,64 +181,58 @@ body {
         // ————————————————————————————————————o————————————————————————————————————o INRO -->
         // INRO -->
         // ————————————————————————————————————o————————————————————————————————————o INRO -->
-        .introCirc {
-            display: none;
-            position: absolute;
-            width: 74%;
-            margin-left: 120px;
-            transform: rotate(118deg);
-            border-radius: 50%;
-            z-index: 1;
-        }
         #neoIntro {
             display: block;
             overflow: hidden;
             position: relative;
-            height: auto; // height: calc(100vh + 170px);
-            // min-height: 100vh;
-            margin: 0;
-            margin-bottom: 100px; // margin: 200px 0;
+            min-height: 90vh;
             .neoCopySect {
                 // position: absolute;
-                // margin-top: 170px;
-                z-index: 2;
+                z-index: 1;
             }
-        } // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
+            .introCirc {
+                display: none;
+                position: absolute;
+                top: 43%;
+                left: 11%;
+                width: 30%;
+                transform: rotate(118deg);
+                border-radius: 50%;
+                z-index: 0;
+                opacity: 0.9;
+            }
+        }
+        // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
         // VIDEOS -->
         // ————————————————————————————————————o————————————————————————————————————o VIDEOS -->
         #neoVideos {
-            grid-area: neoVideos;
-            margin-bottom: 100px;
         }
         .neoVid {
             grid-area: neoVid;
         }
         .videoWrapper {
-            // grid-area: neoVid;
             position: relative;
-            padding-bottom: 56.25%;
-            /* 16:9 Aspect Ratio */
-            // padding-bottom: 75%;    /* 4:3 */
-            height: 0; // max-height: 100vh;
+            padding-bottom: 56.25%; // 16:9 Aspect Ratio */
+            // padding-bottom: 75%; // 4:3 */
+            height: 0;
         }
         .videoWrapper iframe {
-            position: absolute; // position: relative;
+            position: absolute;
             top: 0;
             left: 0;
             width: 100%;
-            height: 100%; // max-height: 100vh;
+            height: 100%;
         }
         .videoOne {
-            grid-area: videoOne; // margin-top: 50px;
+            grid-area: videoOne;
             margin-bottom: 50px;
         }
         .videoTwo {
             grid-area: videoTwo;
             .videoWrapper {
-                padding-bottom: 75%;
-                /* 4:3 */
+                padding-bottom: 75%; // 4:3 
                 iframe {
-                    float: left; // max-height: calc(100vh - 40px);
+                    float: left;
                 }
             }
         } // ————————————————————————————————————o————————————————————————————————————o BIOS -->
@@ -243,7 +240,7 @@ body {
         // ————————————————————————————————————o————————————————————————————————————o BIOS -->
         #neoBios {
             grid-area: neoBios;
-            max-width: 1700px; // margin-top: 60px;
+            max-width: 1700px;
             overflow: hidden;
             .neoBio {
                 display: inline-block;
@@ -251,7 +248,7 @@ body {
             img {
                 float: left;
                 padding: 0 15px 20px 0;
-                width: 33.3333%; // width: 29%;
+                width: 33.3333%;
                 max-width: 260px;
             }
             p {
@@ -320,12 +317,16 @@ body {
                 margin: 2.8vw 0 0 0;
                 visibility: visible;
             }
-        } // .circ {
-        //     grid-area: circ;
-        //     justify-self: start;
-        //     width: 88%;
-        //     margin-left: -7%;
-        // }
+        }
+        #neoIntro {
+            .neoCopySect {
+                position: absolute;
+            }
+            .introCirc {
+                display: block;
+                top: 35%;
+            }
+        }
         #neoBios {
             img {
                 margin: 0 10px 10px 0;
