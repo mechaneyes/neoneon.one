@@ -203,6 +203,7 @@ body {
                 opacity: 0.9;
             }
             .dotThreeCirc {
+                display: none;
                 position: absolute;
                 right: 15%;
                 bottom: 15%;
@@ -344,6 +345,9 @@ body {
                 display: block;
                 top: 35%;
                 top: 40%;
+            }
+            .dotThreeCirc {
+                display: block;
             }
         }
         #neoBios {
