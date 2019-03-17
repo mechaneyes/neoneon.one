@@ -22,7 +22,9 @@ html:after {
     left:0;
     right:0;
     z-index:-1; /* needed to keep in the background */
-    background: url(../images/barclays.jpg) fixed;
+    background: url(../images/barclays.jpg);
+    // background-attachment: fixed;
+    background-attachment: scroll;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -164,7 +166,7 @@ body {
                     position: absolute;
                     height: 100%;
                     height: 500px;
-                    margin-top: 33%;
+                    margin-top: 42%;
                     z-index: 1;
                     .neonLogo {
                         display: block;
@@ -185,7 +187,7 @@ body {
                     width: 70%;
                     // transform: rotate(118deg);
                     z-index: 0;
-                    opacity: 0.8;
+                    opacity: 0.9;
     
                 }
                 .rect {
