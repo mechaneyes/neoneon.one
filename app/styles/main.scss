@@ -248,22 +248,32 @@ body {
             img {
                 float: left;
                 padding: 0 15px 20px 0;
+                padding-bottom: 0;
                 width: 33.3333%;
                 max-width: 260px;
             }
             p {
                 display: block;
+                clear: both;
             }
             .neoBio {
                 display: inline-block;
                 padding-top: 20px;
             }
-            .nameDesc {
+            .bioNameTit {
                 display: block;
+                position: absolute;
+                right: 0;
+                width: 66.6666%;
+                float: right;
+                // border:1px solid yellow;
             }
             .bioRay {
                 // grid-area: bioRay;
                 margin-bottom: 10px;
+                .headshot {
+                    padding-bottom: 0;
+                }
             }
             .bioAndrey {
                 // grid-area: bioAndrey;
@@ -325,6 +335,7 @@ body {
             .introCirc {
                 display: block;
                 top: 35%;
+                top: 40%;
             }
         }
         #neoBios {
@@ -333,16 +344,25 @@ body {
                 padding-bottom: 0;
                 width: 33.3333%;
             }
+            p {
+                clear: none;
+            }
+            .bioNameTit {
+                display: block;
+                position: relative;
+                float: none;
+                width: 66.6666%;
+            }
         }
     }
 }
 
-// ————————————————————————————————————o————————————————————————————————————o 1050px -->
-// ————————————————————————————————————o————————————————————————————————————o 1050px -->
-// 1050px -->
-// ————————————————————————————————————o————————————————————————————————————o 1050px -->
-// ————————————————————————————————————o————————————————————————————————————o 1050px -->
-@media (min-width: 1050px) {
+// ————————————————————————————————————o————————————————————————————————————o 1024px -->
+// ————————————————————————————————————o————————————————————————————————————o 1024px -->
+// 1024px -->
+// ————————————————————————————————————o————————————————————————————————————o 1024px -->
+// ————————————————————————————————————o————————————————————————————————————o 1024px -->
+@media (min-width: 1024px) {
     #neoHome #neoMain {
         #neoHero {
             .heroContent {
