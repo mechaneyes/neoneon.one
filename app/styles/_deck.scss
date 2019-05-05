@@ -1,0 +1,108 @@
+// @font-face {
+//     font-family: "gpkn";
+//     src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot");
+//     src: url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.eot?#iefix") format("embedded-opentype"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.woff2") format("woff2"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.woff") format("woff"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.ttf") format("truetype"),
+//     url("//db.onlinewebfonts.com/t/21c1dea08d980bc822282dcfebae9287.svg#gpkn") format("svg");
+// }
+
+$dropShadow: 1px 1px black;
+$dropShadow: 2px 0px black;
+
+html:after {
+    content: "";
+    position: fixed;
+    /* stretch a fixed position to the whole screen */
+    top: 0;
+    height: 100vh;
+    /* fix for mobile browser address bar appearing disappearing */
+    left: 0;
+    right: 0;
+    z-index: -1;
+    /* needed to keep in the background */
+    background: url(../images/barclays.jpg); // background-attachment: fixed;
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+body {
+    margin: 0;
+}
+
+#neoDeck {
+    margin: 20px;
+    font-family: regulator-nova, sans-serif;
+    color: #ff0a57;
+    font-style: normal;
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box;
+    }
+    img {
+        display: block;
+    }
+    h1 {
+        grid-area: neoLogo;
+        justify-self: start;
+        align-self: end;
+        margin: 0 1% 0 0;
+        margin-right: -6%;
+        font-family: gpkn;
+        font-weight: 900;
+        font-size: 60px;
+        color: #ff0151;
+        text-shadow: $dropShadow;
+        z-index: 2;
+    }
+    h2 {
+        display: inline;
+        font-size: 7.6vw;
+        font-weight: 700;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        text-shadow: $dropShadow;
+        z-index: 1;
+    }
+    h3 {
+        margin: -5px 0 7px;
+        padding: 0;
+        font-size: 25px;
+        line-height: 1.2;
+        text-shadow: $dropShadow;
+    }
+    h4 {
+        margin: 5px 0 0;
+        font-size: 19px;
+        font-weight: 600;
+        line-height: 1.2;
+        text-shadow: $dropShadow;
+    }
+    p {
+        margin: 0;
+        padding: 10px 0;
+        font-size: 21px;
+        font-weight: 300;
+        line-height: 1.5;
+        &:not(:first-of-type) {
+            // padding-top: 20px;
+        }
+    }
+    .neoCopySect {
+        margin-top: 20px;
+        padding: 15px 20px;
+        background: rgba(0, 0, 0, 0.8);
+        &:first-child {
+            margin-bottom: 0;
+        }
+    }
+    #deckMain {
+        // position: relative;
+        // max-width: 1280px;
+        margin: 0 auto;
+    }
+}
