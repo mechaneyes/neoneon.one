@@ -449,8 +449,9 @@ body {
 // ————————————————————————————————————o————————————————————————————————————o TABLET LANDSCAPE -->
 // TABLET LANDSCAPE -->
 // ————————————————————————————————————o————————————————————————————————————o TABLET LANDSCAPE -->
-@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+@media (min-width: 1024px) and (orientation: landscape) {
     #neoHome #neoMain #neoHero .heroContent {
+        height: auto;
         margin-top: 0;
         top: 50%;
         transform: translateY(-50%);
