@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-site-verification" content="jDtFNbPa-faK5nMDTky7G4eArOsvvMi7M_f-4eIIu_8" />
+	<title>neoneon &middot; Ray Weitzenberg &middot; Andrey Radovski</title>
+	<!-- Place favicon.ico in the root directory -->
+
+	<!-- build:css styles/vendor.css -->
+	<!-- bower:css -->
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<link rel="stylesheet" href="//use.typekit.net/teb3zki.css">
+	<!-- <link rel="stylesheet" href="//db.onlinewebfonts.com/c/21c1dea08d980bc822282dcfebae9287?family=gpkn" /> -->
+
+
+
+	<!-- build:css styles/main.css -->
+	<link rel="stylesheet" href="styles/main.css">
+	<!-- endbuild -->
+
+</head>
+
+<body>
+
+	<section id="neoHome" class="neoPrivacy">
+
+		<header>
+
+		</header>
+
+		<main id="neoMain">
+
+
+				<!-- ————————————————————————————————————o————————————————————————————————————o HERO -->
+					<!-- HERO -->
+				<!-- ————————————————————————————————————o————————————————————————————————————o HERO -->
+				<article id="neoHero">
+                    <div class="heroContent">
+                        <img class="neoLogo" src="images/neoneonLogo.png" />
+                    </div>
+					<!-- <img class="circ" src="images/o01c.jpg" />
+					<img class="rect" src="images/i01c.jpg" /> -->
+				</article>
+
+
+
+
+
+				<!-- ————————————————————————————————————o————————————————————————————————————o BIOS -->
+					<!-- BIOS -->
+				<!-- ————————————————————————————————————o————————————————————————————————————o BIOS -->
+				<article class="neoArticle">
+					<div class="neoCopySect">
+                        <h2>Privacy Policy</h2>
+                        <p>The beeAtHoneys app as an Open Source app. This SERVICE is provided by at no cost and is intended for use as is.</p>
+
+                        <p>This page is used to inform visitors regarding my policies with the collection, use, and disclosure of Personal Information if anyone decided to use my Service.</p>
+                                
+                        <p>If you choose to use my Service, then you agree to the collection and use of information in relation to this policy. The Personal Information that I collect is used for providing and improving the Service. I will not use or share your information with anyone except as described in this Privacy Policy.</p>
+                        
+					</div>
+				</article>
+
+
+
+
+
+
+				<!-- ————————————————————————————————————o————————————————————————————————————o CONTACT -->
+					<!-- CONTACT -->
+				<!-- ————————————————————————————————————o————————————————————————————————————o CONTACT -->
+				<article id="neoContact" class="neoCopySect">
+					<p><a href="https://vimeo.com/neoneonone">Vimeo</a> &middot; <a href="https://twitter.com/neoneon_one">Twitter</a> &middot; <a href="https://www.instagram.com/neoneon_one/">Instagram</a></p>
+					<p style="padding-top: 0;"><a href="mailto:one@neoneon.one">one@neoneon.one</a></p>
+				</article>
+
+		</main>
+
+	</section>
+
+	<!-- build:js scripts/vendor.js -->
+	<!-- bower:js -->
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+	<!-- endbower -->
+	<!-- endbuild -->
+
+	<!-- build:js scripts/main.js -->
+	<script src="scripts/main.js"></script>
+	<!-- endbuild -->
+	
+	<script>
+
+        var introLeft = window.innerWidth / 2 - $('#neoHero .rect').width();
+        var introOffset = $('#neoIntro').offset()
+
+        $(function() {
+            console.log('introOffset: ' + introOffset.left)
+            // $('#neoIntro').css('margin-left', introLeft)
+
+
+            var viewportWidth = window.innerWidth;
+            var introCopyHeight = $('#neoIntro .neoCopySect').height();
+            // console.log('introHeight: ' + introHeight)
+
+
+
+            $('#neoIntro .revealer').click(function() {
+                console.log('show')
+                $('#neoIntro .hidden').slideToggle()
+            })
+
+            $('#neoVideos .revealer').click(function() {
+                console.log('show')
+                $('#neoVideos .hidden').slideToggle()
+            })
+
+
+
+        })
+
+		// var scroller = $('h2');
+
+		// function mQuery(x) {
+		// 	if (x.matches) { // If media query matches
+		// 		var body = $("html, body");
+		// 		body.stop().animate({scrollTop:300}, 500, 'swing');
+		// 	} else {
+		// 		// document.body.style.backgroundColor = "pink";
+		// 	}
+		// }
+
+		// var x = window.matchMedia("(max-height: 880px)")
+		// mQuery(x) // Call listener function at run time
+		// x.addListener(mQuery) // Attach listener function on state changes
+
+
+
+		
+		// setTimeout(function() {
+
+		// 	var body = $("html, body");
+		// 	body.stop().animate({scrollTop:300}, 500, 'swing');
+
+		// }, 1000);
+	</script>
+</body>
+
+</html>
